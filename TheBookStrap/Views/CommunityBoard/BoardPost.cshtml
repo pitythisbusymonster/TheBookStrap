@@ -1,0 +1,116 @@
+﻿@model List<CommunityBoard>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h1 class="display-4">Filter Posts</h1>
+Enter a post title:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="PostTitle" class="control-label col-md-1">Title</label>
+        <input name="PostTitle" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="BoardPosts" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+<h1 class="display-4">Posts</h1>
+
+@foreach (CommunityBoard post in Model)
+{
+    <details>
+        <summary><strong class="m-3">Post Title:</strong>@post.PostTitle </summary>
+
+        <p>
+            <br />
+            <strong class="m-3">Written By:</strong>
+            @post.PostCreator.Name <br />
+
+            <strong class="m-3">Post:</strong>
+            @post.PostText <br />
+
+            <strong class="m-3">Date:</strong>
+            @post.PostDate <br />
+        </p>
+
+        @if (post.Replies.Count != 0)
+        {
+            <h3>Replies</h3>
+
+            @foreach (Reply reply in post.Replies)
+            {
+                <p>
+                    <strong class="m-3">Reply:</strong>
+                    @reply.ReplyText <br />
+
+                    <strong class="m-3">Date:</strong>
+                    @reply.ReplyDate.Date <br />
+
+                    <strong class="m-3">From:</strong>
+                    @reply.Replier <br />
+
+
+                </p>
+            }
+        }
+
+        <a asp-action="Reply" asp-route-forumId="@post.PostID" class="btn btn-secondary">Reply to Post</a>
+
+
+    </details>
+
+
+
+}
+
+
+
+
+
+
+@*
+    @foreach (CommunityBoard post in Model)
+    {
+        <p>
+            <br />
+            <strong class="m-3">Written By:</strong>
+            @post.PostCreator.Name <br />
+
+            <strong class="m-3">Post Title:</strong>
+            @post.PostTitle <br />
+
+            <strong class="m-3">Post:</strong>
+            @post.PostText <br />
+
+            <strong class="m-3">Date:</strong>
+            @post.PostDate <br />
+
+        </p>
+
+        @if (post.Replies.Count != 0)
+        {
+            <h3>Replies</h3>
+
+            @foreach (Reply reply in post.Replies)
+            {
+                <p>
+                    <strong class="m-3">Reply:</strong>
+                    @reply.ReplyText <br />
+
+                    <strong class="m-3">Date:</strong>
+                    @reply.ReplyDate.Date <br />
+
+                    <strong class="m-3">From:</strong>
+                    @reply.Replier <br />
+
+
+                </p>
+            }
+        }
+
+        <a asp-action="Reply" asp-route-forumId="@post.PostID" class="btn btn-secondary">Reply to Post</a>
+    }
+*@

@@ -1,0 +1,31 @@
+﻿@model Journal
+@{
+    ViewData["Title"] = "Journal";
+}
+
+<div class="text-center jumbotron">
+    <div class="container">
+        <h1> Daily Entry</h1>
+    </div>
+</div>
+
+<div class="form-group">
+    <form method="post" class="container">
+        <div class="row">
+            <label asp-for="EntryText" class="control-label col-sm-2">Today's Entry:</label>
+            <input asp-for="EntryText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="container pt-4">
+            <button type="submit" class="btn btn-dark">Save Entry</button>
+        </div>
+    </form>
+</div>
+
+<br />
+<br />
+
+<div><a href="/Journal/Journal"> View all your entries here</a></div>
+
+<br />
+<br />

@@ -1,0 +1,62 @@
+﻿@model List<Journal>
+
+@{
+    ViewData["Title"] = "Entries";
+}
+
+<!--<h1 class="display-4">Filter Posts</h1>
+Enter a post title:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="PostTitle" class="control-label col-md-1">Title</label>
+        <input name="PostTitle" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="BoardPosts" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+    -->
+<h1 class="display-4">All Entries:</h1>
+
+
+@foreach (Journal entry in Model)
+{
+    <details>
+        <summary><strong class="m-3">Date:</strong>@entry.EntryDate <br /></summary>
+
+        <p>
+            <br />
+            <strong class="m-3">Entry:</strong>
+            @entry.EntryText <br />
+        </p>
+    </details>
+
+}
+
+
+@*
+    @foreach (Journal entry in Model)
+    {
+
+    <p>
+        <br />
+        <strong class="m-3">Journalist:</strong>
+        @entry.Journalist <br />
+
+        <br />
+        <strong class="m-3">Entry:</strong>
+        @entry.EntryText <br />
+
+        <strong class="m-3">Date:</strong>
+        @entry.EntryDate <br />
+        <br />
+
+        <strong class="m-3">Status:</strong>
+        @entry.EntryStatus <br />
+        <br />
+
+    </p>
+    }
+
+*@

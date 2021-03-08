@@ -1,0 +1,44 @@
+﻿@model CommunityBoard
+@{
+    ViewData["Title"] = "CommunityBoard";
+}
+
+<div class="text-center jumbotron">
+    <div class="container">
+        <h1> Discussion Board</h1>
+        <p>
+            Have something to say? Create a post!
+        </p>
+    </div>
+</div>
+
+<div class="form-group">
+    <form method="post" class="container">
+        <div class="row">
+            <label asp-for="PostCreator.Name" class="control-label col-sm-2">Written By:</label>
+            <input asp-for="PostCreator.Name" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="row">
+            <label asp-for="PostTitle" class="control-label col-sm-2">Title:</label>
+            <input asp-for="PostTitle" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="row">
+            <label asp-for="PostText" class="control-label col-sm-2">Post:</label>
+            <input asp-for="PostText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="container pt-4">
+            <button type="submit" class="btn btn-dark">Post Message</button>
+        </div>
+    </form>
+</div>
+
+<br />
+<br />
+
+<div><a href="/CommunityBoard/BoardPosts"> View all the posts here</a></div>
+
+<br />
+<br />

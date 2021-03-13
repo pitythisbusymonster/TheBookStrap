@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Tests
 {
-    public class RepoTests
+    public class JournalTests
     {
         [Fact]
         public void Test1()

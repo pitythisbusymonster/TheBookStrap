@@ -59,7 +59,7 @@ namespace TheBookStrap.Controllers
         }
 
         [Authorize]
-        public IActionResult Agenda()
+        public IActionResult Agenda(Agenda sched)
         {
             //get all posts in the db
             List<Agenda> entries = repo.Schedule.ToList();

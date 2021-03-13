@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TheBookStrap.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Seeded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -209,7 +209,7 @@ namespace TheBookStrap.Migrations
                     MorningText = table.Column<string>(maxLength: 500, nullable: false),
                     AfternoonText = table.Column<string>(maxLength: 500, nullable: false),
                     EveningText = table.Column<string>(maxLength: 500, nullable: false),
-                    NotesText = table.Column<string>(maxLength: 500, nullable: false)
+                    NotesText = table.Column<string>(maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {

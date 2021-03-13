@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210226030409_Initial.cs" />
+    <Compile Remove="Migrations\20210226030409_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Migrations\" />
     <Folder Include="Views\HabitTracker\" />
     <Folder Include="Views\Scrapbook\" />

@@ -10,8 +10,8 @@ using TheBookStrap.Models;
 namespace TheBookStrap.Migrations
 {
     [DbContext(typeof(NotebooksContext))]
-    [Migration("20210226030409_Initial")]
-    partial class Initial
+    [Migration("20210313223522_Seeded")]
+    partial class Seeded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -252,7 +252,6 @@ namespace TheBookStrap.Migrations
                         .HasMaxLength(500);
 
                     b.Property<string>("NotesText")
-                        .IsRequired()
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 

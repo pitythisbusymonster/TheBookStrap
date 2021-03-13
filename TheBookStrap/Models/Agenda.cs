@@ -14,6 +14,23 @@ namespace TheBookStrap.Models
         //EveningText
         //NotesText
 
+        //SixAm
+        //SevenAM
+        //EightAM
+        //NineAM
+        //TenAM
+        //ElevenAM
+        //Noon
+        //OnePM
+        //TwoPM
+        //ThreePM
+        //FourPM
+        //FivePM
+        //SixPM
+        //SevenPM
+        //EightPM
+        
+
         [Key]
         public int AgendaID { get; set; }
 
@@ -40,7 +57,7 @@ namespace TheBookStrap.Models
         public string EveningText { get; set; }
 
 
-        [Required(ErrorMessage = "Text is required.")]
+        [Required(ErrorMessage = "Text is required.")]  //NEED TO REMOVE THIS
         [StringLength(500, MinimumLength = 5,
         ErrorMessage = "An entry must be at least 5 characters, no more than 500 characters")]
         public string NotesText { get; set; }

@@ -13,7 +13,7 @@ namespace TheBookStrap.Models
         //EntryStatus
 
         [Key]
-        public int JournalID { get; set; }
+        public int JournalID { get; set; }   //should be "EntryID"
 
 
         public AppUser Journalist { get; set; }

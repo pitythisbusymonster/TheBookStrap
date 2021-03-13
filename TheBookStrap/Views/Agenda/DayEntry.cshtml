@@ -1,5 +1,46 @@
-﻿@*
-    
-*@
+﻿@model Agenda
 @{
+    ViewData["Title"] = "Agenda";
 }
+
+<div class="text-center jumbotron">
+    <div class="container">
+        <h1> Daily Schedule</h1>
+    </div>
+</div>
+
+<div class="form-group">
+    <form method="post" class="container">
+        <div class="row">
+            <label asp-for="MorningText" class="control-label col-sm-2">8am - 12pm:</label>
+            <input asp-for="MorningText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="row">
+            <label asp-for="AfternoonText" class="control-label col-sm-2">1pm - 5pm:</label>
+            <input asp-for="AfternoonText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="row">
+            <label asp-for="EveningText" class="control-label col-sm-2">6pm - 10pm:</label>
+            <input asp-for="EveningText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="row">
+            <label asp-for="NotesText" class="control-label col-sm-2">Notes:</label>
+            <input asp-for="NotesText" class="form-control col-sm-8 mb-2" />
+        </div>
+
+        <div class="container pt-4">
+            <button type="submit" class="btn btn-dark">Save Entry</button>
+        </div>
+    </form>
+</div>
+
+<br />
+<br />
+
+<div><a href="/Agenda/Agenda"> View all your entries here</a></div>
+
+<br />
+<br />

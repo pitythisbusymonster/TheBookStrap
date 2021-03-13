@@ -96,3 +96,4 @@ C:\Users\turne\source\repos\TheBookStrap\TheBookStrap\obj\Debug\netcoreapp3.1\Th
 C:\Users\turne\source\repos\TheBookStrap\TheBookStrap\obj\Debug\netcoreapp3.1\TheBookStrap.pdb
 C:\Users\turne\source\repos\TheBookStrap\TheBookStrap\obj\Debug\netcoreapp3.1\TheBookStrap.genruntimeconfig.cache
 C:\Users\turne\source\repos\TheBookStrap\TheBookStrap\obj\Debug\netcoreapp3.1\Razor\Views\Journal\Index.cshtml.g.cs
+C:\Users\turne\source\repos\TheBookStrap\TheBookStrap\obj\Debug\netcoreapp3.1\Razor\Views\Agenda\Index.cshtml.g.cs

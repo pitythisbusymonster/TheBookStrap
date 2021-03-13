@@ -14,7 +14,10 @@ namespace TheBookStrap.Models
         //Journal
         public DbSet<Journal> Entries { get; set; }
 
+        //public DbSet<OpenJournal> PublicPages { get; set;}
+
         //Agenda
         public DbSet<Agenda> Schedule { get; set; }
+
     }
 }

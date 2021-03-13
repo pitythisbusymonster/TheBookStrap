@@ -42,6 +42,13 @@ namespace TheBookStrap
                 .AddEntityFrameworkStores<NotebooksContext>()
                 .AddDefaultTokenProviders();
 
+            //for user specific authorization
+            
+            services.AddAuthorization(options =>
+            {
+                //options.AddPolicy("JournalistOnly", policy => policy.Requirements.Add(new Journal()));//, Journal.<AppUser>Journalist));  //
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

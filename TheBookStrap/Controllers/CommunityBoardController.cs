@@ -37,7 +37,22 @@ namespace TheBookStrap.Controllers
 
         //no aothorize, visitors can view posts, just not create or reply
         [HttpPost]
-        public IActionResult CommunityBoard(CommunityBoard model)
+        public RedirectToActionResult CommunityBoard(CommunityBoard model)    
+        {
+            if (ModelState.IsValid)
+            {
+                model.PostCreator = userManager.GetUserAsync(User).Result;
+                model.PostCreator.Name = model.PostCreator.UserName;
+                model.PostDate = DateTime.Now;
+                repo.AddPost(model);
+            }
+            else
+            {
+                return RedirectToAction("CommunityBoard");
+            }
+            return RedirectToAction("BoardPost");
+        }
+        /*public IActionResult CommunityBoard(CommunityBoard model)      //RedirectToActionResult  ?
         {
             model.PostCreator = userManager.GetUserAsync(User).Result;
             model.PostCreator.Name = model.PostCreator.UserName; 
@@ -45,7 +60,7 @@ namespace TheBookStrap.Controllers
             repo.AddPost(model);
 
             return View(model);
-        }
+        }*/
 
         //view posts
         public IActionResult BoardPost()
@@ -97,7 +112,7 @@ namespace TheBookStrap.Controllers
             //retrieve the post replying to
             var post = (from r in repo.Posts
                         where r.PostID == replyVM.PostID
-                        select r).First();
+                        select r).First<CommunityBoard>();
 
             //store the reply with the post in the db
             post.Replies.Add(reply);

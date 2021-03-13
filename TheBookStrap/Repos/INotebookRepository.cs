@@ -1,5 +1,4 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
 using TheBookStrap.Models;
 
 namespace TheBookStrap.Repos
@@ -12,8 +11,18 @@ namespace TheBookStrap.Repos
 
 
 
-        IQueryable<Journal> Entries { get; }    // Read (or retrieve) posts
-        void AddEntry(Journal entries);          // Create a post
+        IQueryable<Journal> Entries { get; }    
+        void AddEntry(Journal entries);         
         void UpdateEntry(Journal entries);
+
+        //void MakeEntryPublic(Journal entries);
+
+
+
+        IQueryable<Agenda> Schedule { get; }    
+        void AddSchedule(Agenda entries);          
+        void UpdateSchedule(Agenda entries);
+
+
     }
 }

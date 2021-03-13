@@ -22,41 +22,20 @@ Enter a post title:
 
 @foreach (Journal entry in Model)
 {
-    <details>
-        <summary><strong class="m-3">Date:</strong>@entry.EntryDate <br /></summary>
-
-        <p>
-            <br />
-            <strong class="m-3">Entry:</strong>
-            @entry.EntryText <br />
-        </p>
-    </details>
-
-}
-
-
-@*
-    @foreach (Journal entry in Model)
-    {
+<details>
+    <summary><strong class="m-3">Date:</strong>@entry.EntryDate <br /></summary>
 
     <p>
         <br />
-        <strong class="m-3">Journalist:</strong>
-        @entry.Journalist <br />
-
-        <br />
         <strong class="m-3">Entry:</strong>
         @entry.EntryText <br />
-
-        <strong class="m-3">Date:</strong>
-        @entry.EntryDate <br />
+    </p>
+    <p>
         <br />
-
         <strong class="m-3">Status:</strong>
         @entry.EntryStatus <br />
-        <br />
-
     </p>
-    }
+</details>
 
-*@
+}
+

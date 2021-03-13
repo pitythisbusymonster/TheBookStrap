@@ -16,6 +16,16 @@
             <input asp-for="EntryText" class="form-control col-sm-8 mb-2" />
         </div>
 
+        <h5>Set the Entry Status:</h5>
+        <div class="row">
+            <label for="private" class="col-1">Private</label>
+            <input asp-for="EntryStatus" id="private" type="radio" value="false" />
+        </div>
+        <div class="row">
+            <label for="public" class="col-1">Public</label>
+            <input asp-for="EntryStatus" id="public" type="radio" value="true" />
+        </div>
+
         <div class="container pt-4">
             <button type="submit" class="btn btn-dark">Save Entry</button>
         </div>
@@ -29,3 +39,4 @@
 
 <br />
 <br />
+

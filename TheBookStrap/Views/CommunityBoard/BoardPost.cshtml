@@ -38,18 +38,18 @@ Enter a post title:
 
         @if (post.Replies.Count != 0)
         {
-            <h3>Replies</h3>
+        <h3>&emsp;&emsp; Replies</h3>
 
             @foreach (Reply reply in post.Replies)
             {
                 <p>
-                    <strong class="m-3">Reply:</strong>
+                    <strong class="m-3">&emsp; &emsp; Reply:</strong>
                     @reply.ReplyText <br />
 
-                    <strong class="m-3">Date:</strong>
+                    <strong class="m-3">&emsp; &emsp; Date:</strong>
                     @reply.ReplyDate.Date <br />
 
-                    <strong class="m-3">From:</strong>
+                    <strong class="m-3">&emsp; &emsp; From:</strong>
                     @reply.Replier <br />
 
 
@@ -57,7 +57,7 @@ Enter a post title:
             }
         }
 
-        <a asp-action="Reply" asp-route-forumId="@post.PostID" class="btn btn-secondary">Reply to Post</a>
+        <a asp-action="Reply" asp-route-postId="@post.PostID" class="btn btn-secondary">Reply to Post</a>
 
 
     </details>

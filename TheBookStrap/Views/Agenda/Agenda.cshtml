@@ -1,6 +1,50 @@
-﻿@*
-    home page, list of collapsed entries (model after forum.cshtml)
-*@
+﻿@model List<Agenda>
+
 @{
+    ViewData["Title"] = "Schedule";
 }
 
+<!--<h1 class="display-4">Filter Posts</h1>
+Enter a post title:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="PostTitle" class="control-label col-md-1">Title</label>
+        <input name="PostTitle" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="BoardPosts" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+    -->
+<h1 class="display-4">Pick a Day:</h1>
+
+
+@foreach (Agenda sched in Model)
+{
+<details>
+    <summary><strong class="m-3">Date:</strong>@sched.AgendaDate <br /></summary>
+
+    <p>
+        <br />
+        <strong class="m-3">Morning:</strong>
+        @sched.MorningText <br />
+    </p>
+    <p>
+        <br />
+        <strong class="m-3">Afternoon:</strong>
+        @sched.AfternoonText <br />
+    </p>
+    <p>
+        <br />
+        <strong class="m-3">Evening:</strong>
+        @sched.EveningText <br />
+    </p>
+    <p>
+        <br />
+        <strong class="m-3">Notes:</strong>
+        @sched.NotesText <br />
+    </p>
+</details>
+
+}

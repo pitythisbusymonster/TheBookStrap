@@ -1,5 +1,4 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
 using TheBookStrap.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -60,6 +59,46 @@ namespace TheBookStrap.Repos
             context.SaveChanges();
         }
 
+
+        /*public void MakeEntryPublic(Journal entry)
+        {
+            context.PublicPages.Add(entry);
+            context.SaveChanges();
+        }*/
+
+
+
+        public IQueryable<Agenda> Schedule
+        {
+            get
+            {
+                return context.Schedule.Include(entry => entry.AgendaOwner);
+            }
+        }
+        public void AddSchedule(Agenda entry)
+        {
+            context.Schedule.Add(entry);
+            context.SaveChanges();
+        }
+
+        public void UpdateSchedule(Agenda entry)
+        {
+            context.Schedule.Update(entry);
+            context.SaveChanges();
+        }
+
+
+
+
+        /*
+         public IQueryable<OpenJournal> PublicPages
+        {
+            get
+            {
+                return context.PublicPages.Include(page => page.Journalist);
+            }
+        }
+         */
 
     }
 }

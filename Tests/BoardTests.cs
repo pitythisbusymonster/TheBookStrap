@@ -44,9 +44,9 @@ namespace Tests
             var controller = new CommunityBoardController(fakeRepo, null);
             var post = new CommunityBoard()
             {
-                PostTitle = "The Willows",
-                PostCreator = new AppUser() { Name = "Me" },
-                PostText = "If you haven't read it, I highly recommend it!"
+                PostTitle = "Habit or Hobby",
+                PostCreator = new AppUser() { Name = "Sally Echolls" },
+                PostText = "What is the difference between a habit and a hobby?"
             };
 
             // Act

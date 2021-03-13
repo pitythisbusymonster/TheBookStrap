@@ -10,7 +10,7 @@ using TheBookStrap.Models;
 namespace TheBookStrap.Migrations
 {
     [DbContext(typeof(NotebooksContext))]
-    [Migration("20210313223522_Seeded")]
+    [Migration("20210313232156_Seeded")]
     partial class Seeded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

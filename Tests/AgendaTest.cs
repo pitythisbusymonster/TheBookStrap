@@ -49,11 +49,11 @@ namespace Tests
             var controller = new AgendaController(fakeRepo, null);
             var sched = new Agenda()
             {
-                AgendaOwner = new AppUser() { Name = "Me" },
-                MorningText = "If you haven't read it, I highly recommend it!",
-                AfternoonText = "If you haven't read it, I highly recommend it!",
-                EveningText = "If you haven't read it, I highly recommend it!",
-                NotesText = "If you haven't read it, I highly recommend it!",
+                AgendaOwner = new AppUser() { Name = "Amber Turner" },
+                MorningText = "Hike Goodman with Kellum",
+                AfternoonText = "late lunch, meet with Jacob",
+                EveningText = "Dinner date with Fletcher",
+                NotesText = "Don't forget to fold the laundry!",
             };
 
             // Act

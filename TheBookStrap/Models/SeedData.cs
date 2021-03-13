@@ -51,7 +51,7 @@ namespace TheBookStrap.Models
 
                 context.Posts.Add(post);
 
-
+                context.SaveChanges();
 
 
                 AppUser kitchenGod = new AppUser
@@ -108,22 +108,9 @@ namespace TheBookStrap.Models
 
 
                 context.SaveChanges();
-            }
 
 
-
-            if (!context.Entries.Any())
-            {
-
-                AppUser mySelf = new AppUser
-                {
-                    UserName = "ignoreMePlease",
-                    Name = "Amber Turner"
-                };
-                context.Users.Add(mySelf);
-                context.SaveChanges();   // This will add a UserID to the reviewer object
-
-                Journal post = new Journal
+                 post = new Journal
                 {
                     Journalist = mySelf,
                     EntryText = "Lorem ipsum dolor sit amet, " +
@@ -145,6 +132,11 @@ namespace TheBookStrap.Models
 
 
 
+            
+
+
+
+
 
             //seed agenda entry
             if (!context.Schedule.Any())
@@ -156,7 +148,7 @@ namespace TheBookStrap.Models
                     Name = "Amber Turner"
                 };
                 context.Users.Add(mySelf);
-                context.SaveChanges();   // This will add a UserID to the reviewer object
+                context.SaveChanges();   
 
                 Agenda sched = new Agenda
                 {
@@ -172,22 +164,9 @@ namespace TheBookStrap.Models
                 context.Schedule.Add(sched);
 
 
-                context.SaveChanges();
-            }
 
 
-            if (!context.Schedule.Any())
-            {
-
-                AppUser mySelf = new AppUser
-                {
-                    UserName = "ignoreMePlease",
-                    Name = "Amber Turner"
-                };
-                context.Users.Add(mySelf);
-                context.SaveChanges();   // This will add a UserID to the reviewer object
-
-                Agenda sched = new Agenda
+                sched = new Agenda
                 {
                     AgendaOwner = mySelf,
                     MorningText = "Volunteer at Hendricks",
@@ -201,8 +180,10 @@ namespace TheBookStrap.Models
                 context.Schedule.Add(sched);
 
 
+
                 context.SaveChanges();
             }
+
 
         }
     }

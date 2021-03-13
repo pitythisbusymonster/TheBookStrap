@@ -28,8 +28,6 @@ namespace TheBookStrap.Repos
 
         public void UpdatePost(CommunityBoard post)
         {
-            //context.Posts.Update(post);
-            //context.SaveChanges();
             throw new NotImplementedException();
         }
 
@@ -50,8 +48,6 @@ namespace TheBookStrap.Repos
 
         public void UpdateEntry(Journal entry)
         {
-            //context.Posts.Update(post);
-            //context.SaveChanges();
             throw new NotImplementedException();
         }
 
@@ -78,8 +74,6 @@ namespace TheBookStrap.Repos
 
         public void UpdateSchedule(Agenda entry)
         {
-            //context.Posts.Update(post);
-            //context.SaveChanges();
             throw new NotImplementedException();
         }
 

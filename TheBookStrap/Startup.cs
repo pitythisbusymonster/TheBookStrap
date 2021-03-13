@@ -44,10 +44,10 @@ namespace TheBookStrap
 
             //for user specific authorization
             
-            services.AddAuthorization(options =>
+            /*services.AddAuthorization(options =>
             {
-                //options.AddPolicy("JournalistOnly", policy => policy.Requirements.Add(new Journal()));//, Journal.<AppUser>Journalist));  //
-            });
+                //options.AddPolicy("JournalistOnly", policy => policy.Requirements.Add();
+            });*/
 
         }
 

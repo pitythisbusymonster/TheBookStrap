@@ -52,15 +52,6 @@ namespace TheBookStrap.Controllers
             }
             return RedirectToAction("BoardPost");
         }
-        /*public IActionResult CommunityBoard(CommunityBoard model)      //RedirectToActionResult  ?
-        {
-            model.PostCreator = userManager.GetUserAsync(User).Result;
-            model.PostCreator.Name = model.PostCreator.UserName; 
-            model.PostDate = DateTime.Now;
-            repo.AddPost(model);
-
-            return View(model);
-        }*/
 
         //view posts
         public IActionResult BoardPost()

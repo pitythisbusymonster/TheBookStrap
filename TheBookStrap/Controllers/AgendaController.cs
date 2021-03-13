@@ -31,14 +31,6 @@ namespace TheBookStrap.Controllers
                 user.Id = await userManager.GetUserIdAsync(user);//
                 users.Add(user);
             }
-
-            //this is an initilization list
-            //AdminVM model = new AdminVM
-            //{
-            //Users = users,              //list of AppUsers
-            //Roles = roleManager.Roles
-            //};
-            //return View(model);
             return View();
         }
 

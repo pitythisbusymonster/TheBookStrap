@@ -26,7 +26,7 @@ namespace Tests
             };
 
             // Actf
-            controller.Agenda(sched);
+            controller.DayEntry(sched);
 
             // Assert
             // Ensure that the post was added to the repository
@@ -57,7 +57,7 @@ namespace Tests
             };
 
             // Act
-            controller.Agenda(sched);
+            controller.DayEntry(sched);
 
             // Assert
             // Ensure that the post was added to the repository

@@ -41,7 +41,7 @@ namespace TheBookStrap.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.PostCreator = userManager.GetUserAsync(User).Result;
+                model.PostCreator = userManager.GetUserAsync(User).Result;    //need to comment out before running test
                 model.PostCreator.Name = model.PostCreator.UserName;
                 model.PostDate = DateTime.Now;
                 repo.AddPost(model);

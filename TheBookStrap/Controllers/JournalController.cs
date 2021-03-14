@@ -58,16 +58,16 @@ namespace TheBookStrap.Controllers
         [HttpPost]
         public RedirectToActionResult Entry(Journal model) 
         {
-            model.Journalist = userManager.GetUserAsync(User).Result;
+            model.Journalist = userManager.GetUserAsync(User).Result;       //need to comment out before running test
             model.Journalist.Name = model.Journalist.UserName;
             model.EntryDate = DateTime.Now;
             
             repo.AddEntry(model);
 
-            if (model.EntryStatus == true)
+            /*if (model.EntryStatus == true)
             {
                 //repo.MakeEntryPublic(model);
-            }
+            }*/
 
             //return View(model);
             return RedirectToAction("Journal");

@@ -250,7 +250,6 @@ namespace TheBookStrap.Migrations
                         .HasMaxLength(500);
 
                     b.Property<string>("NotesText")
-                        .IsRequired()
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 

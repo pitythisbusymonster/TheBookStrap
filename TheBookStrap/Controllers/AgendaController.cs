@@ -49,7 +49,7 @@ namespace TheBookStrap.Controllers
         [HttpPost]
         public RedirectToActionResult DayEntry(Agenda m)
         {
-            m.AgendaOwner = userManager.GetUserAsync(User).Result;
+            m.AgendaOwner = userManager.GetUserAsync(User).Result;     //need to comment out before running test
             m.AgendaOwner.Name = m.AgendaOwner.UserName;
             m.AgendaDate = DateTime.Now;
             repo.AddSchedule(m);
@@ -59,7 +59,7 @@ namespace TheBookStrap.Controllers
         }
 
         [Authorize]
-        public IActionResult Agenda()
+        public IActionResult Agenda(Agenda sched)
         {
             //get all posts in the db
             List<Agenda> entries = repo.Schedule.ToList();

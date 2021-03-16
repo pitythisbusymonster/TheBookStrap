@@ -57,7 +57,7 @@ namespace TheBookStrap.Models
         public string EveningText { get; set; }
 
 
-        [Required(ErrorMessage = "Text is required.")]  //NEED TO REMOVE THIS
+        //[Required(ErrorMessage = "Text is required.")]  //NEED TO REMOVE THIS
         [StringLength(500, MinimumLength = 5,
         ErrorMessage = "An entry must be at least 5 characters, no more than 500 characters")]
         public string NotesText { get; set; }

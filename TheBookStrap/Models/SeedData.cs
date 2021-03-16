@@ -51,7 +51,7 @@ namespace TheBookStrap.Models
 
                 context.Posts.Add(post);
 
-
+                context.SaveChanges();
 
 
                 AppUser kitchenGod = new AppUser
@@ -108,8 +108,81 @@ namespace TheBookStrap.Models
 
 
                 context.SaveChanges();
+
+
+                 post = new Journal
+                {
+                    Journalist = mySelf,
+                    EntryText = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore " +
+                    "magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi " +
+                    "ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate " +
+                    "velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non " +
+                    "proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    EntryDate = DateTime.Parse("12/1/2020"),
+                    EntryStatus = false
+                };
+
+                context.Entries.Add(post);
+
+
+                context.SaveChanges();
             }
 
+
+
+
+            
+
+
+
+
+
+            //seed agenda entry
+            if (!context.Schedule.Any())
+            {
+
+                AppUser mySelf = new AppUser
+                {
+                    UserName = "ignoreMePlease",
+                    Name = "Amber Turner"
+                };
+                context.Users.Add(mySelf);
+                context.SaveChanges();   
+
+                Agenda sched = new Agenda
+                {
+                    AgendaOwner = mySelf,
+                    MorningText = "Hike Goodman with Kellum",
+                    AfternoonText = "late lunch, meet with Jacob",
+                    EveningText = "Dinner date with Fletcher",
+                    NotesText = "Don't forget to fold the laundry!",
+                    AgendaDate = DateTime.Parse("01/1/2021")
+                    
+                };
+
+                context.Schedule.Add(sched);
+
+
+
+
+                sched = new Agenda
+                {
+                    AgendaOwner = mySelf,
+                    MorningText = "Volunteer at Hendricks",
+                    AfternoonText = "House chores",
+                    EveningText = "Meal prep",
+                    NotesText = "Call mom at some point",
+                    AgendaDate = DateTime.Parse("01/2/2021")
+
+                };
+
+                context.Schedule.Add(sched);
+
+
+
+                context.SaveChanges();
+            }
 
 
         }

@@ -40,6 +40,7 @@ namespace TheBookStrap.Controllers
                 //Roles = roleManager.Roles
             //};
             //return View(model);
+
             return View();
         }
 
@@ -63,6 +64,8 @@ namespace TheBookStrap.Controllers
             model.EntryDate = DateTime.Now;
             
             repo.AddEntry(model);
+
+
 
             /*if (model.EntryStatus == true)
             {

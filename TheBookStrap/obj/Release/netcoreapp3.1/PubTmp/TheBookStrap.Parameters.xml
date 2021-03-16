@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="TheBookStrap" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\turne\\source\\repos\\TheBookStrap\\TheBookStrap\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="TheBookStrap.Models.NotebooksContext" description="" value="Server=tcp:fallcs295.database.windows.net,1433;Initial Catalog=BookStrap;Persist Security Info=False;User ID=WebDev;Password=F1reL1ght1;MultipleActiveResultSets=true;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\turne\\source\\repos\\TheBookStrap\\TheBookStrap\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\TheBookStrap\.Models\.NotebooksContext\.sql$" />
+  </parameter>
+</parameters>

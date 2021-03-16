@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUwxdHkxT/UCWRQ1Iku/19QAAAAACAAAAAAAQZgAAAAEAACAAAADKailTQzXb+QQMUpW689mngD1wDX2Jar46Ex1DDuy2BQAAAAAOgAAAAAIAACAAAAB6KNnjFyW6SGnXjd3Hq3IU8/eycDnJ95zGPbQskZ76adABAAAwbgxCWfXQeQmbGQncTr0QI+//rgdiFg4d0kpP+OjFD5MS1KJmU2LoJgSLx0/jeXJUpnQSouFzxufWi4wsdVJrnwrTLIjioYmZnNRjXCdZ3Ty4InvsR4qwSZoRaE7yUpqQoYZZeIytyTFYlXbnIQGJspR3NaUhAAaYYdd72C1Ft9Mct5UxPXx0qeAtVuz/CZDn5HMGWrZPaJhRLgORynmqr3IbqkAVtnrdaGjuuf0UJukS47xnpPZXeT50IC4qe+dCsdLdGZ/MzdKxGRZMmIjS7ePXtxAPCxYBu8Ex7BSm9BFeRasAsMTQTpaqmTsDUN7IkobNrrZC1l8hiJRtP46PETWvIofZnXqGGmkSHwGDmk0CUGYSb4N2mulWeXeX0BG/MDWM+10mlEFFtAwlt07gknLB9NvjlzacV02NtkDI0DyFEqWTdrS2e8ELRR5k4poKkDtsf5I2gB/zqgCp9MkC0lzz29WdNIJxQcMKJJxfLfwdz/x/YieMcR1XjRORRFypUwJfrN472CFwum2jKeS7QD6ZTe6X9+GNsGTgvuBq4YnqpDPPU3qGslAT2zQInErrf7qZJ/Qs1JNVGhfYC0rzdYWKSEbOk2ou765tJ8nDnkAAAAAPew6YCCqps6esnoW0h1bQPEv3XnVe/1YeGqhxqxy2UkppzsIk6xke6Gbac/+rKxReGah9s4k9RMjTKc9M//uK</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="SQLServerConnection">
+      <Value>Server=tcp:fallcs295.database.windows.net,1433%3bInitial Catalog=BookStrap%3bPersist Security Info=False%3bUser ID=WebDev%3bPassword=F1reL1ght1%3bMultipleActiveResultSets=true%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TheBookStrap.Models.NotebooksContext">
+      <Value>Server=tcp:fallcs295.database.windows.net,1433%3bInitial Catalog=BookStrap%3bPersist Security Info=False%3bUser ID=WebDev%3bPassword=F1reL1ght1%3bMultipleActiveResultSets=true%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

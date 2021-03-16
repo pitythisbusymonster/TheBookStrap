@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>1d45cb4d-7de2-4947-8298-6a98d1d95ef3</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +10,14 @@
     <Compile Remove="Migrations\20210226030409_Initial.Designer.cs" />
     <Compile Remove="Migrations\20210313223522_Seeded.cs" />
     <Compile Remove="Migrations\20210313223522_Seeded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_WebToolingArtifacts Remove="Properties\serviceDependencies.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\serviceDependencies.json" />
   </ItemGroup>
 
   <ItemGroup>
